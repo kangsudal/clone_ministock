@@ -34,10 +34,10 @@ class GaugeChart extends StatelessWidget {
   /// Create one series with sample hard coded data.
   static List<charts.Series<GaugeSegment, String>> _createSampleData() {
     final data = [
-      new GaugeSegment('Low', 75),
-      new GaugeSegment('Acceptable', 100),
-      new GaugeSegment('High', 50),
-      new GaugeSegment('Highly Unusual', 5),
+      new GaugeSegment('Low', 75, charts.MaterialPalette.teal.shadeDefault),
+      new GaugeSegment('Acceptable', 100, charts.MaterialPalette.blue.shadeDefault),
+      new GaugeSegment('High', 50, charts.MaterialPalette.purple.shadeDefault),
+      new GaugeSegment('Highly Unusual', 5, charts.MaterialPalette.red.shadeDefault),
     ];
 
     return [
@@ -45,6 +45,7 @@ class GaugeChart extends StatelessWidget {
         id: 'Segments',
         domainFn: (GaugeSegment segment, _) => segment.segment,
         measureFn: (GaugeSegment segment, _) => segment.size,
+        colorFn: (GaugeSegment segment, _) => segment.color,
         data: data,
       )
     ];
@@ -55,6 +56,7 @@ class GaugeChart extends StatelessWidget {
 class GaugeSegment {
   final String segment;
   final int size;
+  final charts.Color color;
 
-  GaugeSegment(this.segment, this.size);
+  GaugeSegment(this.segment, this.size, this.color);
 }
