@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myministock/widget/gaugechart_widget.dart';
+import 'package:myministock/widget/stackedfillcolorbarchart.dart';
+import 'package:myministock/widget/stackedtargetline_widget.dart';
 
 
 
@@ -53,7 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
               flex: 1,
               child: Stack(
                 children: [
-                  GaugeChart.withSampleData(),
+                  StackedFillColorBarChart.withSampleData(),
+                  // StackedBarTargetLineChart.withSampleData(),
+                  // GaugeChart.withSampleData(),
                   Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
