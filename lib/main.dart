@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       '$_counter',
                       style: Theme.of(context).textTheme.headline4,
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {},
                       child: Text("구매접수           없음>"),
                     )
@@ -116,15 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {},
                           child: Text("보유 주식"),
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {},
                           child: Text("실현손익"),
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {},
                           child: Text("배당내역"),
                         ),
@@ -154,11 +154,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {},
                           child: Text("이체"),
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {},
                           child: Text("거래내역"),
                         ),
